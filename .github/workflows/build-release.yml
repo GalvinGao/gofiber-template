@@ -1,0 +1,65 @@
+name: Build Docker Image (Release)
+
+on:
+  push:
+    # trigger on version tag push
+    tags:
+      - "v*"
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v3
+
+      - name: "Docker: Setup Buildx"
+        uses: docker/setup-buildx-action@v2
+
+      - name: "Metadata: Git"
+        id: git-meta
+        run: |
+          export TRUNCATED_GITHUB_SHA=$(echo ${{ github.sha }} | cut -c1-7);
+          export VERSION=${GITHUB_REF/refs\/tags\//};
+          echo "mini-sha=${TRUNCATED_GITHUB_SHA}" >> $GITHUB_OUTPUT;
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT;
+          echo "version-label=${VERSION}+${TRUNCATED_GITHUB_SHA}" >> $GITHUB_OUTPUT;
+
+      - name: "Docker: Login to GitHub Container Registry"
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
+
+      - name: "Docker: Metadata"
+        id: docker-meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ghcr.io/GalvinGao/gofiber-template
+          tags: |
+            type=semver,pattern=v{{version}}
+            type=ref,event=branch
+            type=ref,event=pr
+          flavor: |
+            latest=auto
+
+      - name: "Docker: Build and Push Image"
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          load: true
+          tags: ${{ steps.docker-meta.outputs.tags }}
+          labels: ${{ steps.docker-meta.outputs.labels }}
+          build-args: |
+            VERSION=${{ steps.git-meta.outputs.version }}
+
+      - name: "GitHub: Create Repository Release"
+        uses: "marvinpinto/action-automatic-releases@v1.2.1"
+        with:
+          repo_token: "${{ github.token }}"
+          prerelease: false
