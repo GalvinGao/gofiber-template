@@ -1,6 +1,6 @@
 # gofiber-template
 
-This is an opinioned template for building a RESTful API via HTTP transport project using [gofiber/fiber](https://github.com/gofiber/fiber) framework, with container support via [Docker](https://www.docker.com/) and CI/CD support via [GitHub Actions](https://github.com/features/actions).
+This is an opinionated template for building a RESTful API via HTTP transport project using [gofiber/fiber](https://github.com/gofiber/fiber) framework, with container support via [Docker](https://www.docker.com/) and CI/CD support via [GitHub Actions](https://github.com/features/actions).
 
 ## Features
 
@@ -10,7 +10,7 @@ This is an opinioned template for building a RESTful API via HTTP transport proj
   - [joho/godotenv](https://github.com/joho/godotenv) for ease of local development
 - **Structured Logging** via [rs/zerolog](https://github.com/rs/zerolog)
 - **Fastest Web Framework** via [gofiber/fiber](https://github.com/gofiber/fiber) with zero memory allocation and performance in mind
-- **Opinioned MVC Folder Structure** following [golang-standards/project-layout](https://github.com/golang-standards/project-layout)
+- **Opinionated MVC Folder Structure** following [golang-standards/project-layout](https://github.com/golang-standards/project-layout)
 - **Database Integration** via [uptrace/bun](https://github.com/uptrace/bun)
   - Built-in Database Migration via [uptrace/bun/migrate](https://bun.uptrace.dev/guide/migrations.html)
   - Easily write [complex queries](https://bun.uptrace.dev/#why-another-golang-orm), at the same time still have ready to use [struct-based CRUD operations](https://bun.uptrace.dev/guide/query-insert.html#example)
