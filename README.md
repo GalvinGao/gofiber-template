@@ -7,7 +7,7 @@ This is an opinionated template for building a RESTful API via HTTP transport pr
 - **Dependency Injection** via [go.uber.org/fx](https://github.com/uber-go/fx)
 - **Configuration** via environment variable for easy container integration, utilizing
   - [kelseyhightower/envconfig](https://github.com/kelseyhightower/envconfig) for built-in common standard library value parsing support as well for custom value parsing support
-  - [joho/godotenv](https://github.com/joho/godotenv) for ease of local development
+  - [joho/godotenv](https://github.com/joho/godotenv) for using `.env` files to ease local development
 - **Structured Logging** via [rs/zerolog](https://github.com/rs/zerolog)
 - **Fastest Web Framework** via [gofiber/fiber](https://github.com/gofiber/fiber) with zero memory allocation and performance in mind
 - **Opinionated MVC Folder Structure** following [golang-standards/project-layout](https://github.com/golang-standards/project-layout)
