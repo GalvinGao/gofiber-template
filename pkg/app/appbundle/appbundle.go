@@ -1,7 +1,7 @@
 // The content of this file is intended to be used with go's -ldflags option to inject version control information.
 // DO NOT EDIT THE VARIABLE NAMES UNLESS YOU KNOW WHAT YOU ARE DOING.
 
-package bininfo
+package appbundle
 
 import "time"
 

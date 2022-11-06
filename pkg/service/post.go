@@ -18,7 +18,21 @@ func NewPost(postRepo *repo.Post) *Post {
 }
 
 func (s *Post) GetPosts(ctx context.Context) ([]model.Post, error) {
-	posts, err := s.postRepo.GetPosts(ctx)
+	return s.postRepo.GetPosts(ctx)
+}
 
-	return posts, err
+func (s *Post) GetPostByID(ctx context.Context, id int) (*model.Post, error) {
+	return s.postRepo.GetPostByID(ctx, id)
+}
+
+func (s *Post) CreatePost(ctx context.Context, post *model.Post) error {
+	return s.postRepo.CreatePost(ctx, post)
+}
+
+func (s *Post) UpdatePost(ctx context.Context, post *model.Post) error {
+	return s.postRepo.UpdatePost(ctx, post)
+}
+
+func (s *Post) DeletePost(ctx context.Context, id int) error {
+	return s.postRepo.DeletePost(ctx, id)
 }
