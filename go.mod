@@ -10,7 +10,7 @@ require (
 	github.com/uptrace/bun v1.1.11
 	github.com/uptrace/bun/dialect/pgdialect v1.1.10
 	github.com/uptrace/bun/driver/pgdriver v1.1.11
-	github.com/urfave/cli/v2 v2.24.2
+	github.com/urfave/cli/v2 v2.24.3
 	go.uber.org/fx v1.19.1
 	gopkg.in/guregu/null.v3 v3.5.0
 )
