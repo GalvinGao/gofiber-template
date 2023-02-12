@@ -10,5 +10,5 @@ import (
 )
 
 func Start(module fx.Option) {
-	app.New(appcontext.Declare(appcontext.EnvCLI)).Start(context.Background())
+	app.New(appcontext.Declare(appcontext.EnvCLI), module).Start(context.Background())
 }
