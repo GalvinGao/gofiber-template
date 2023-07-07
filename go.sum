@@ -124,6 +124,8 @@ github.com/uptrace/bun/dialect/pgdialect v1.1.11 h1:z1CLRQiYtTX1Usn2OEF7EtOBYeTF
 github.com/uptrace/bun/dialect/pgdialect v1.1.11/go.mod h1:orzsx6UwNnSaTTELzLqc/XiWrR4k0Smid8Bchdg0mk4=
 github.com/uptrace/bun/dialect/pgdialect v1.1.13 h1:j9BecpkRA9SDVBwh6oKhC5rABk4B40s66OCcqBHSQXM=
 github.com/uptrace/bun/dialect/pgdialect v1.1.13/go.mod h1:G9h6kk5qfTyACjTja7gqM7SbRc0rqRc9AWDjzxwA7nY=
+github.com/uptrace/bun/dialect/pgdialect v1.1.14 h1:b7+V1KDJPQSFYgkG/6YLXCl2uvwEY3kf/GSM7hTHRDY=
+github.com/uptrace/bun/dialect/pgdialect v1.1.14/go.mod h1:v6YiaXmnKQ2FlhRD2c0ZfKd+QXH09pYn4H8ojaavkKk=
 github.com/uptrace/bun/driver/pgdriver v1.1.8 h1:gyL22axRQfjJS2Umq0erzJnp0bLOdUE8/USKZHPQB8o=
 github.com/uptrace/bun/driver/pgdriver v1.1.8/go.mod h1:4tHK0h7a/UoldBoe9J3GU4tEYjr3mkd62U3Kq3PVk3E=
 github.com/uptrace/bun/driver/pgdriver v1.1.9 h1:Dy9g/EpgOG15RP3mDAuJd/hnfXAUdBsfxpg9On27M+Y=
