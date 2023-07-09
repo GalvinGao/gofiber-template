@@ -13,6 +13,7 @@ require (
 	github.com/urfave/cli/v2 v2.25.7
 	go.uber.org/fx v1.19.1
 	gopkg.in/guregu/null.v3 v3.5.0
+	gopkg.in/guregu/null.v4 v4.0.0
 )
 
 require (
