@@ -5,8 +5,8 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/GalvinGao/gofiber-template/pkg/app"
-	"github.com/GalvinGao/gofiber-template/pkg/app/appcontext"
+	"github.com/GalvinGao/gofiber-template/internal/app"
+	"github.com/GalvinGao/gofiber-template/internal/app/appcontext"
 )
 
 func Start(module fx.Option) {

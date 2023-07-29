@@ -4,7 +4,7 @@ import (
 	_ "github.com/joho/godotenv/autoload"
 	"github.com/kelseyhightower/envconfig"
 
-	"github.com/GalvinGao/gofiber-template/pkg/app/appcontext"
+	"github.com/GalvinGao/gofiber-template/internal/app/appcontext"
 )
 
 func Parse(ctx appcontext.Ctx) (*Config, error) {

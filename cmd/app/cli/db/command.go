@@ -9,7 +9,7 @@ import (
 	"go.uber.org/fx"
 
 	cliapp "github.com/GalvinGao/gofiber-template/cmd/app/cli"
-	"github.com/GalvinGao/gofiber-template/pkg/infra/db/migrations"
+	"github.com/GalvinGao/gofiber-template/internal/infra/db/migrations"
 )
 
 type dbCommandDeps struct {

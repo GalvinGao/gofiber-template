@@ -4,7 +4,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"go.uber.org/fx"
 
-	"github.com/GalvinGao/gofiber-template/pkg/service"
+	"github.com/GalvinGao/gofiber-template/internal/service"
 )
 
 type Post struct {

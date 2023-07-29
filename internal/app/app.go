@@ -3,15 +3,15 @@ package app
 import (
 	"go.uber.org/fx"
 
-	"github.com/GalvinGao/gofiber-template/pkg/app/appconfig"
-	"github.com/GalvinGao/gofiber-template/pkg/app/appcontext"
-	"github.com/GalvinGao/gofiber-template/pkg/controller"
-	"github.com/GalvinGao/gofiber-template/pkg/infra"
-	"github.com/GalvinGao/gofiber-template/pkg/repo"
-	"github.com/GalvinGao/gofiber-template/pkg/server"
-	"github.com/GalvinGao/gofiber-template/pkg/service"
-	"github.com/GalvinGao/gofiber-template/pkg/x/logger"
-	"github.com/GalvinGao/gofiber-template/pkg/x/logger/fxlogger"
+	"github.com/GalvinGao/gofiber-template/internal/app/appconfig"
+	"github.com/GalvinGao/gofiber-template/internal/app/appcontext"
+	"github.com/GalvinGao/gofiber-template/internal/controller"
+	"github.com/GalvinGao/gofiber-template/internal/infra"
+	"github.com/GalvinGao/gofiber-template/internal/repo"
+	"github.com/GalvinGao/gofiber-template/internal/server"
+	"github.com/GalvinGao/gofiber-template/internal/service"
+	"github.com/GalvinGao/gofiber-template/internal/x/logger"
+	"github.com/GalvinGao/gofiber-template/internal/x/logger/fxlogger"
 )
 
 func New(ctx appcontext.Ctx, additionalOpts ...fx.Option) *fx.App {
