@@ -12,7 +12,7 @@ require (
 	github.com/uptrace/bun/driver/pgdriver v1.1.14
 	github.com/urfave/cli/v2 v2.25.7
 	go.uber.org/fx v1.20.0
-	gopkg.in/guregu/null.v3 v3.5.0
+	gopkg.in/guregu/null.v4 v4.0.0
 	gopkg.in/guregu/null.v4 v4.0.0
 )
 
