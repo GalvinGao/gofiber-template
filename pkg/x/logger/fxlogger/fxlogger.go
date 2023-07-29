@@ -33,6 +33,6 @@ func (l fxLogger) Write(p []byte) (n int, err error) {
 		// Trim CR added by stdlog.
 		p = p[0 : n-1]
 	}
-	l.l.Info().Msg(string(p))
+	l.l.Debug().Msg(string(p))
 	return
 }

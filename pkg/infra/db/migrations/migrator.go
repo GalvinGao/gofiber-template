@@ -31,7 +31,7 @@ func (m *Migrator) Migrate(ctx context.Context) error {
 	}
 
 	log.Info().
-		Interface("migrations", group.Migrations).
+		Str("migrations", formatMigrations(group.Migrations)).
 		Msg("applied migrations")
 
 	return nil
@@ -49,7 +49,7 @@ func (m *Migrator) Rollback(ctx context.Context) error {
 	}
 
 	log.Info().
-		Interface("migrations", group.Migrations).
+		Interface("migrations", formatMigrations(group.Migrations)).
 		Msg("rolled back migrations")
 	return nil
 }
@@ -99,15 +99,15 @@ func (m *Migrator) Status(ctx context.Context) error {
 	}
 
 	log.Info().
-		Interface("migrations", ms).
+		Interface("migrations", formatMigrations(ms)).
 		Msg("migrations status")
 
 	log.Info().
-		Interface("unapplied", ms.Unapplied()).
+		Interface("unapplied", formatMigrations(ms.Unapplied())).
 		Msg("unapplied migrations")
 
 	log.Info().
-		Interface("last_group", ms.LastGroup()).
+		Stringer("last_group", ms.LastGroup()).
 		Msg("last migration group")
 
 	return nil
@@ -125,7 +125,7 @@ func (m *Migrator) MarkApplied(ctx context.Context) error {
 	}
 
 	log.Info().
-		Interface("migrations", group.Migrations).
+		Interface("migrations", formatMigrations(group.Migrations)).
 		Msg("marked migrations as applied")
 	return nil
 }
