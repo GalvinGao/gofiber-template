@@ -30,7 +30,7 @@ jobs:
           echo "version-label=${VERSION}+${TRUNCATED_GITHUB_SHA}" >> $GITHUB_OUTPUT;
 
       - name: "Docker: Login to GitHub Container Registry"
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
