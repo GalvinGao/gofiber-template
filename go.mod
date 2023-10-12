@@ -8,7 +8,7 @@ require (
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/rs/zerolog v1.31.0
 	github.com/uptrace/bun v1.1.16
-	github.com/uptrace/bun/dialect/pgdialect v1.1.14
+	github.com/uptrace/bun/dialect/pgdialect v1.1.16
 	github.com/uptrace/bun/driver/pgdriver v1.1.16
 	github.com/urfave/cli/v2 v2.25.7
 	go.uber.org/fx v1.20.0
