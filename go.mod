@@ -8,8 +8,8 @@ require (
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/rs/zerolog v1.31.0
 	github.com/uptrace/bun v1.1.17
-	github.com/uptrace/bun/dialect/pgdialect v1.1.16
-	github.com/uptrace/bun/driver/pgdriver v1.1.16
+	github.com/uptrace/bun/dialect/pgdialect v1.1.17
+	github.com/uptrace/bun/driver/pgdriver v1.1.17
 	github.com/urfave/cli/v2 v2.27.1
 	go.uber.org/fx v1.20.1
 	gopkg.in/guregu/null.v4 v4.0.0
@@ -40,7 +40,7 @@ require (
 	go.uber.org/dig v1.17.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.23.0 // indirect
-	golang.org/x/crypto v0.14.0 // indirect
+	golang.org/x/crypto v0.18.0 // indirect
 	golang.org/x/sys v0.16.0 // indirect
 	mellium.im/sasl v0.3.1 // indirect
 )
