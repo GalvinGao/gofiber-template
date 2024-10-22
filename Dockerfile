@@ -22,12 +22,12 @@ COPY . .
 RUN export BUILD_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ"); go build -o app -ldflags "-X github.com/GalvinGao/gofiber-template/internal/app/appbundle.Version=$VERSION -X github.com/GalvinGao/gofiber-template/internal/app/appbundle.BuildTimeString=$BUILD_TIME" .
 
 # runner
-FROM base AS runner
-RUN apk add --no-cache libc6-compat tini
-# Tini is now available at /sbin/tini
+FROM gcr.io/distroless/static-debian11 AS runner
+WORKDIR /app
 
 COPY --from=builder /app/app /app/app
 EXPOSE 8080
 
-ENTRYPOINT ["/sbin/tini", "--"]
-CMD [ "/app/app" ]
+USER nonroot:nonroot
+
+ENTRYPOINT ["/app/app"]
