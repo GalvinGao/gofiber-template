@@ -1,6 +1,8 @@
 module github.com/GalvinGao/gofiber-template
 
-go 1.19
+go 1.22
+
+toolchain go1.24.6
 
 require (
 	github.com/gofiber/fiber/v2 v2.52.8
@@ -11,6 +13,7 @@ require (
 	github.com/uptrace/bun/dialect/pgdialect v1.1.17
 	github.com/uptrace/bun/driver/pgdriver v1.1.17
 	github.com/urfave/cli/v2 v2.27.7
+	github.com/urfave/cli/v3 v3.4.1
 	go.uber.org/fx v1.20.1
 	gopkg.in/guregu/null.v4 v4.0.0
 )
