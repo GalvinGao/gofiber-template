@@ -1,15 +1,13 @@
-FROM golang:1.25.5-alpine AS base
+FROM golang:1.25.5-bookworm AS base
 WORKDIR /app
 
 # builder
 FROM base AS builder
-ENV GOOS linux
-ENV GOARCH amd64
 
 # build-args
 ARG VERSION
 
-RUN apk --no-cache add bash git openssh
+RUN apt-get update && apt-get install -y --no-install-recommends bash git openssh-client && rm -rf /var/lib/apt/lists/*
 
 # modules: utilize build cache
 COPY go.mod ./
