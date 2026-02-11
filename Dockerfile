@@ -1,4 +1,4 @@
-FROM golang:1.25.5-bookworm AS base
+FROM golang:1.26.0-bookworm AS base
 WORKDIR /app
 
 # builder
