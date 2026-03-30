@@ -1,14 +1,14 @@
 module github.com/GalvinGao/gofiber-template
 
-go 1.23
+go 1.24.0
 
 require (
 	github.com/gofiber/fiber/v2 v2.52.12
 	github.com/joho/godotenv v1.5.1
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/rs/zerolog v1.35.0
-	github.com/uptrace/bun v1.1.17
-	github.com/uptrace/bun/dialect/pgdialect v1.1.17
+	github.com/uptrace/bun v1.2.18
+	github.com/uptrace/bun/dialect/pgdialect v1.2.18
 	github.com/uptrace/bun/driver/pgdriver v1.1.17
 	github.com/urfave/cli/v2 v2.27.7
 	go.uber.org/fx v1.20.1
@@ -26,6 +26,7 @@ require (
 	github.com/mattn/go-runewidth v0.0.16 // indirect
 	github.com/philhofer/fwd v1.1.3-0.20240916144458-20a13a1f6b7c // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/puzpuzpuz/xsync/v3 v3.5.1 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/tinylib/msgp v1.2.5 // indirect
@@ -41,6 +42,6 @@ require (
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.23.0 // indirect
 	golang.org/x/crypto v0.18.0 // indirect
-	golang.org/x/sys v0.29.0 // indirect
+	golang.org/x/sys v0.41.0 // indirect
 	mellium.im/sasl v0.3.1 // indirect
 )
