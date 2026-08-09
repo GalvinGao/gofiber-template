@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v3"
 	"go.uber.org/fx"
 
 	"github.com/GalvinGao/gofiber-template/internal/service"
@@ -18,7 +18,7 @@ func RegisterPost(c Post) {
 	c.Route.Get("/posts", c.GetPosts)
 }
 
-func (c *Post) GetPosts(ctx *fiber.Ctx) error {
+func (c *Post) GetPosts(ctx fiber.Ctx) error {
 	posts, err := c.PostService.GetPosts(ctx.Context())
 	if err != nil {
 		return err
