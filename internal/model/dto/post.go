@@ -1,6 +1,6 @@
 package dto
 
-import "gopkg.in/guregu/null.v4"
+import "github.com/guregu/null/v6"
 
 type UpdatePostDTO struct {
 	Title       null.String `json:"title"`
