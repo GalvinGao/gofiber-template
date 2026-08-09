@@ -1,6 +1,6 @@
 # gofiber-template
 
-This is an opinionated template for building a RESTful API via HTTP transport project using [gofiber/fiber](https://github.com/gofiber/fiber) framework, with container support via [Docker](https://www.docker.com/) and CI/CD support via [GitHub Actions](https://github.com/features/actions).
+This is an opinionated template for building a RESTful API via HTTP transport project using [Fiber v3](https://docs.gofiber.io/) with container support via [Docker](https://www.docker.com/) and CI/CD support via [GitHub Actions](https://github.com/features/actions).
 
 ## Features
 
@@ -9,7 +9,7 @@ This is an opinionated template for building a RESTful API via HTTP transport pr
   - [kelseyhightower/envconfig](https://github.com/kelseyhightower/envconfig) for built-in common standard library value parsing support as well for custom value parsing support
   - [joho/godotenv](https://github.com/joho/godotenv) for using `.env` files to ease local development
 - **Structured Logging** via [rs/zerolog](https://github.com/rs/zerolog) for zero-allocation JSON/[CBOR](https://github.com/rs/zerolog#binary-encoding) logging with support for log level, timestamp, and caller information, as well a human-readable render for local development
-- **Fastest Web Framework** via [gofiber/fiber](https://github.com/gofiber/fiber) with zero memory allocation and performance in mind
+- **Fastest Web Framework** via [Fiber v3](https://docs.gofiber.io/) with zero memory allocation and performance in mind
 - **Opinionated MVC Folder Structure** following [golang-standards/project-layout](https://github.com/golang-standards/project-layout)
 - **Database Integration** via [uptrace/bun](https://github.com/uptrace/bun)
   - Built-in Database Migration via [uptrace/bun/migrate](https://bun.uptrace.dev/guide/migrations.html)
@@ -22,6 +22,8 @@ This is an opinionated template for building a RESTful API via HTTP transport pr
     3. Creates a [GitHub Release](https://github.com/GalvinGao/gofiber-template/releases) with automatically generated [GitHub Release Notes](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes) via [marvinpinto/action-automatic-releases](https://github.com/marvinpinto/action-automatic-releases)
 
 ## Getting Started
+
+Fiber v3 requires Go 1.25 or newer.
 
 ### 1. Get the template
 
