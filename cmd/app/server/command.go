@@ -1,12 +1,16 @@
 package server
 
-import "github.com/urfave/cli/v2"
+import (
+	"context"
+
+	"github.com/urfave/cli/v3"
+)
 
 func Command() *cli.Command {
 	return &cli.Command{
 		Name:  "start",
 		Usage: "start server",
-		Action: func(c *cli.Context) error {
+		Action: func(context.Context, *cli.Command) error {
 			Run()
 			return nil
 		},
